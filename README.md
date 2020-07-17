@@ -20,6 +20,7 @@ Work with window.localStorage, window.sessionStorage as if it were an object, us
 Chess engine written in typescript
 
 - Repository [https://github.com/akcyp/chess-engine](https://github.com/akcyp/chess-engine)
+- Live demo [https://akcyp.github.io/chess-engine/](https://akcyp.github.io/chess-engine/)
 
 ## html5-kurve-game
 
