@@ -24,7 +24,6 @@ const lasso = createLasso({
 document.querySelector('button').addEventListener('click', () => lasso.reset());
 
 },{"lasso-canvas-image":2}],2:[function(require,module,exports){
-
 /**
  * @typedef {Object} Point
  * @property {number} x
@@ -67,7 +66,11 @@ function createLasso (options) {
    */
   const path = [];
   let pathClosed = false;
-  let lastEvent = 0;
+  const lastEvents = {
+    start: 0,
+    move: 0,
+    end: 0
+  };
 
   /**
    * @param {() => void} fn
@@ -190,10 +193,10 @@ function createLasso (options) {
     e.preventDefault();
   });
   ['mousedown', 'touchstart'].forEach(event => canvas.addEventListener(event, /** @param {MouseEvent | TouchEvent} e */ (e) => {
-    if (!options.enabled || Date.now() - lastEvent < 10) {
+    if (!options.enabled || Date.now() - lastEvents.start < 10) {
       return;
     }
-    lastEvent = Date.now();
+    lastEvents.start = Date.now();
     nextFrame();
     controllers.mousedown = true;
     controllers.startPos = getMousePosition(e, false);
@@ -202,10 +205,10 @@ function createLasso (options) {
     controllers.selectedPoint = path.find((p1) => getDistance(p1, controllers.pos) <= options.radius) || null;
   }));
   ['mousemove', 'touchmove'].forEach(event => canvas.addEventListener(event, /** @param {MouseEvent | TouchEvent} e */ (e) => {
-    if (!options.enabled || Date.now() - lastEvent < 10) {
+    if (!options.enabled || Date.now() - lastEvents.move < 10) {
       return;
     }
-    lastEvent = Date.now();
+    lastEvents.move = Date.now();
     controllers.pos = getMousePosition(e);
     if (controllers.mousedown) {
       if (controllers.selectedPoint) {
@@ -217,10 +220,10 @@ function createLasso (options) {
     nextFrame();
   }));
   ['mouseup', 'touchend', 'touchcancel'].forEach(event => canvas.addEventListener(event, /** @param {MouseEvent | TouchEvent} e */  (e) => {
-    if (!options.enabled || Date.now() - lastEvent < 10) {
+    if (!options.enabled || Date.now() - lastEvents.end < 10) {
       return;
     }
-    lastEvent = Date.now();
+    lastEvents.end = Date.now();
     if (e instanceof MouseEvent && e.button === 2) {
       if (controllers.selectedPoint) {
         path.splice(path.indexOf(controllers.selectedPoint), 1);
