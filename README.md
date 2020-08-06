@@ -28,3 +28,9 @@ Achtung die kurve written in javascript
 
 - Repository [https://github.com/akcyp/html5-kurve-game](https://github.com/akcyp/html5-kurve-game)
 - Live demo [https://akcyp.github.io/html5-kurve-game/](https://akcyp.github.io/html5-kurve-game/)
+
+## snake-cli
+
+CLI Snake Game written in NodeJS
+
+- Repository [https://github.com/akcyp/snake-cli](https://github.com/akcyp/snake-cli)
