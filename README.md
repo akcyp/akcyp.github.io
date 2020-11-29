@@ -1,5 +1,18 @@
 # `akcyp` Projects and Examples
 
+## express-sequelize-typescript-starter
+
+A typescript boilerplate for NodeJS express applications!
+
+- Repository: [https://github.com/akcyp/express-sequelize-typescript-starter](https://github.com/akcyp/express-sequelize-typescript-starter)
+
+## math-tools
+
+Webpage for math students, Progressive Web App (PWA) made with Quasar Framework!
+
+- Repository: [https://github.com/akcyp/math-tools](https://github.com/akcyp/math-tools)
+- Live Demo [https://akcyp.github.io/math-tools](https://akcyp.github.io/math-tools)
+
 ## lasso-canvas-image
 
 Polygon selecting tool for HTML5 Image Element
