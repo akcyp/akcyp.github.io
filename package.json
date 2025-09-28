@@ -1,0 +1,29 @@
+{
+  "name": "akcyp.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "packageManager": "pnpm@10.17.1+sha512.17c560fca4867ae9473a3899ad84a88334914f379be46d455cbf92e5cf4b39d34985d452d2583baf19967fa76cb5c17bc9e245529d0b98745721aa7200ecaf7a",
+  "engines": {
+    "node": "^22"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@unocss/preset-web-fonts": "^66.5.2",
+    "@unocss/preset-wind3": "^66.5.2",
+    "unocss": "^66.5.2",
+    "vitepress": "2.0.0-alpha.12"
+  },
+  "dependencies": {
+    "@vueuse/core": "^13.9.0",
+    "vue": "^3.5.22"
+  }
+}
