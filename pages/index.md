@@ -14,18 +14,24 @@ hero:
 
 features:
   - icon:
-      src: images/tsc.png
+      src: /images/tsc.png
+    title: ""
   - icon:
-      src: images/react.png
+      src: /images/react.png
+    title: ""
   - icon:
-      src: images/angular.png
+      src: /images/angular.png
+    title: ""
   - icon:
-      src: images/azure.png
+      src: /images/azure.png
+    title: ""
   - icon:
-      light: images/node-light.png
-      dark: images/node-dark.png
+      light: /images/node-light.png
+      dark: /images/node-dark.png
+    title: ""
   - icon:
-      light: images/deno-light.png
-      dark: images/deno-dark.png
+      light: /images/deno-light.png
+      dark: /images/deno-dark.png
+    title: ""
 ---
 
