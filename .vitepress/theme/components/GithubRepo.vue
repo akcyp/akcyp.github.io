@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, onUnmounted, ref, watch } from 'vue';
 import { languageColors } from '../constants/languageColors';
 
 const props = defineProps({
@@ -16,12 +16,22 @@ const props = defineProps({
 });
 
 const langColor = computed(() => languageColors[props.language] ?? 'black');
+const loaded = ref(false);
+watch(props, () => {
+  if (!props.preview) loaded.value = true
+})
+const imgLoaded = () => {
+  loaded.value = true
+}
+onUnmounted(() => {
+  loaded.value = false
+})
 </script>
 
 <template>
-  <div class="flex flex-col shadow-md bg-default">
+  <div :class="['flex flex-col shadow-md bg-default transition-opacity duration-1500', { 'opacity-0': !loaded }]">
     <a v-if="preview" :href="props.homepage || props.html_url">
-      <img class="rounded-t-lg object-cover h-48 w-full object-center" :src="preview" :alt="name" />
+      <img class="rounded-t-lg object-cover h-48 w-full object-center" :src="preview" :alt="name" rel="preload" @load="imgLoaded" />
     </a>
     <div class="flex-1 flex justify-between flex-col p-8 w-full">
       <div>

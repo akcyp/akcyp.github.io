@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
+import { writeFileSync, existsSync, mkdirSync } from "fs";
 import { join, dirname } from "path";
 import type { DownloadCount, Package } from "./types/npm";
 import externals from '../externals.json';

@@ -18,7 +18,7 @@ const homepage = computed(() => `https://www.npmjs.com/package/${props.name}`);
 <template>
   <div class="flex flex-col shadow-md bg-default">
     <a v-if="preview" :href="homepage">
-      <img class="rounded-t-lg object-cover h-48 w-full object-center" :src="preview" :alt="name" />
+      <img class="rounded-t-lg object-cover h-48 w-full object-center" :src="preview" :alt="name" rel="preload" />
     </a>
     <div class="flex-1 flex justify-between flex-col p-8 w-full">
       <div>

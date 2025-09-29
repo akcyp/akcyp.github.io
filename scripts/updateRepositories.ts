@@ -1,5 +1,5 @@
 import type { Repository } from "./types/github";
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
+import { writeFileSync, existsSync, mkdirSync } from "fs";
 import { join, dirname } from "path";
 import externals from '../externals.json';
 
