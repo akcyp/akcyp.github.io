@@ -1,5 +1,5 @@
-import { readFileSync, writeFileSync } from "fs";
-import { join } from "path";
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
+import { join, dirname } from "path";
 import type { DownloadCount, Package } from "./types/npm";
 import externals from '../externals.json';
 
@@ -44,6 +44,8 @@ async function updatePackages() {
   }));
   
   const packagesFilePath = join(__dirname, '../data/packages.json');
+  const dataDir = dirname(packagesFilePath);
+  if (!existsSync(dataDir)) mkdirSync(dataDir, { recursive: true });
   writeFileSync(packagesFilePath, JSON.stringify(packages, undefined, 2), 'utf-8');
 }
 

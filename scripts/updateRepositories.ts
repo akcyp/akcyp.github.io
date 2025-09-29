@@ -1,6 +1,6 @@
 import type { Repository } from "./types/github";
-import { readFileSync, writeFileSync } from "fs";
-import { join } from "path";
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
+import { join, dirname } from "path";
 import externals from '../externals.json';
 
 const getRepoInfo = async (path: string) => {
@@ -36,6 +36,8 @@ async function updateRepositories() {
     return { ...data, ...info };
   }));
   const repositoriesFilePath = join(__dirname, '../data/repositories.json');
+  const dataDir = dirname(repositoriesFilePath);
+  if (!existsSync(dataDir)) mkdirSync(dataDir, { recursive: true });
   writeFileSync(repositoriesFilePath, JSON.stringify(repositories, undefined, 2), 'utf-8');
 }
 

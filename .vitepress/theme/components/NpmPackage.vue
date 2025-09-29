@@ -11,7 +11,7 @@ const props = defineProps({
   preview: String,
 });
 
-const homepage = computed(() => `https://www.npmjs.com/package/${name}`);
+const homepage = computed(() => `https://www.npmjs.com/package/${props.name}`);
 
 </script>
 
