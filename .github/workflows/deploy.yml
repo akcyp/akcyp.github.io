@@ -42,6 +42,10 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+      - name: Run prepare script
+        run: pnpm run docs:prepare
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Build with VitePress
         run: pnpm run docs:build
       - name: Upload artifact

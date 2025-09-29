@@ -1,3 +1,3 @@
 # Angular + Web Components Table Integration
 
-To do
+Coming soon!

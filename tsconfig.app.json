@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    ".vitepress/**/*.ts",
+    ".vitepress/**/*.mts",
+    ".vitepress/**/*.vue",
+    ".vitepress/**/*.md",
+    "pages/**/*.ts",
+    "pages/**/*.mts",
+    "pages/**/*.vue",
+    "pages/**/*.md",
+  ],
+  "vueCompilerOptions": {
+    "vitePressExtensions": [".md"],
+  },
+  "exclude": ["node_modules", ".vitepress/dist", ".vitepress/cache"]
+}

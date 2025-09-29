@@ -1,0 +1,34 @@
+export interface Repository {
+  id: number;
+  node_id: string;
+  name: string;
+  full_name: string;
+  private: boolean;
+  html_url: string;
+  description: string;
+  fork: boolean;
+  created_at: string;
+  updated_at: string;
+  pushed_at: string;
+  homepage: string; // GH pages link
+  size: number;
+  stargazers_count: number;
+  watchers_count: number;
+  language: string;
+  has_issues: boolean;
+  has_projects: boolean;
+  has_downloads: boolean;
+  has_wiki: boolean;
+  has_pages: boolean;
+  has_discussions: boolean;
+  forks_count: number;
+  archived: boolean;
+  disabled: boolean;
+  open_issues_count: number;
+  topics: string[];
+  forks: number;
+  open_issues: number;
+  watchers: number;
+  network_count: number;
+  subscribers_count: number;
+};

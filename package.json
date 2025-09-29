@@ -9,6 +9,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:update:repositories": "tsx scripts/updateRepositories.ts",
+    "docs:update:packages": "tsx scripts/updatePackages.ts",
+    "docs:prepare": "pnpm run docs:update:repositories && pnpm run docs:update:packages",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
@@ -17,12 +20,19 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@iconify-json/cil": "^1.2.3",
+    "@tsconfig/node22": "^22.0.2",
+    "@types/node": "^24.5.2",
+    "@unocss/preset-icons": "^66.5.2",
     "@unocss/preset-web-fonts": "^66.5.2",
     "@unocss/preset-wind3": "^66.5.2",
+    "@unocss/transformer-directives": "^66.5.2",
+    "tsx": "^4.20.6",
     "unocss": "^66.5.2",
     "vitepress": "2.0.0-alpha.12"
   },
   "dependencies": {
+    "@unocss/reset": "^66.5.2",
     "@vueuse/core": "^13.9.0",
     "vue": "^3.5.22"
   }

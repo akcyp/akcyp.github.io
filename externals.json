@@ -1,0 +1,62 @@
+{
+  "packages": [
+    { "name": "react-lasso-select" },
+    { "name": "strapi-plugin-point-list" },
+    { "name": "snake-cli-ts" },
+    { "name": "coverage-pretty-html-reporter" }
+  ],
+  "repositories": [
+    {
+      "path": "akcyp/react-lasso-select",
+      "preview": "https://github.com/akcyp/react-lasso-select/raw/main/preview.jpg"
+    },
+    {
+      "path": "akcyp/react-files-upload",
+      "preview": "https://github.com/akcyp/react-files-upload/raw/main/preview-1.jpg"
+    },
+    {
+      "path": "akcyp/svg-path-marker",
+      "preview": "https://github.com/akcyp/svg-path-marker/raw/main/preview.jpg"
+    },
+    {
+      "path": "akcyp/strapi-plugin-point-list",
+      "preview": "https://github.com/akcyp/strapi-plugin-point-list/raw/main/assets/preview.png"
+    },
+    {
+      "path": "akcyp/residential-area-website",
+      "preview": "https://github.com/akcyp/residential-area-website/raw/main/preview/ss-extra2.jpg"
+    },
+    {
+      "path": "akcyp/coverage-pretty-html-reporter",
+      "preview": "https://github.com/akcyp/coverage-pretty-html-reporter/raw/main/images/file.png"
+    },
+    {
+      "path": "akcyp/chess-online",
+      "preview": "https://github.com/akcyp/chess-online/raw/main/images/game.png"
+    },
+    {
+      "path": "akcyp/snake-cli",
+      "preview": "https://github.com/akcyp/snake-cli/raw/master/snake-cli.gif"
+    },
+    {
+      "path": "akcyp/chess-nlp-pl",
+      "preview": "https://github.com/akcyp/chess-nlp-pl/raw/main/readme/about.png"
+    },
+    {
+      "path": "akcyp/counters-logic-tables",
+      "preview": "https://github.com/akcyp/counters-logic-tables/raw/main/public/ss.jpg"
+    },
+    {
+      "path": "akcyp/math-tools",
+      "preview": "https://github.com/akcyp/math-tools/raw/master/preview.jpg"
+    },
+    {
+      "path": "akcyp/html5-kurve-game",
+      "preview": "https://github.com/akcyp/html5-kurve-game/raw/master/img/main-menu.png"
+    },
+    {
+      "path": "akcyp/matrix-rain",
+      "preview": "https://github.com/akcyp/matrix-rain/raw/master/preview.jpg"
+    }
+  ]
+}
