@@ -7,10 +7,16 @@ hero:
   text: "portfolio"
   tagline: Hello world!
   image: https://github.com/akcyp.png
-  # actions:
-  #   - theme: brand
-  #     text: Download resume
-  #     link: assets/resume.pdf
+  actions:
+    - theme: brand
+      text: Explore projects
+      link: projects
+    - theme: alt
+      text: Explore packages
+      link: packages
+    - theme: alt
+      text: See the blog
+      link: blog
 
 features:
   - icon:
