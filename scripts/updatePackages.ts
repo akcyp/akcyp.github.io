@@ -28,7 +28,8 @@ const getPackageDownloads = async (name: string) => {
     },
   });
   if (response.status < 200 || response.status >= 300) {
-    throw new Error(`Invalid response status: ${response.status}`);
+    return { downloads: 0 };
+    // throw new Error(`Invalid response status: ${response.status}`);
   }
   const data = await response.json() as DownloadCount;
   return {
