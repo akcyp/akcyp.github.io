@@ -30,13 +30,13 @@ onUnmounted(() => {
 
 <template>
   <div :class="['flex flex-col shadow-md bg-default transition-opacity duration-1500', { 'opacity-0': !loaded }]">
-    <a v-if="preview" :href="props.homepage || props.html_url">
+    <a v-if="preview" :href="props.homepage || props.html_url" target="_blank">
       <img class="rounded-t-lg object-cover h-48 w-full object-center" :src="preview" :alt="name" rel="preload" @load="imgLoaded" />
     </a>
     <div class="flex-1 flex justify-between flex-col p-8 w-full">
       <div>
         <div class="flex items-center truncate">
-          <a :href="props.html_url" class="flex gap-2 items-center text-lg tracking-wide flex opacity-60 !no-underline !color-inherit !font-inherit">
+          <a :href="props.html_url" target="_blank" class="flex gap-2 items-center text-lg tracking-wide flex opacity-60 !no-underline !color-inherit !font-inherit">
             <div class="i-cil-link-alt size-1em" />
             <span>{{ props.name }}</span>
           </a>

@@ -17,13 +17,13 @@ const homepage = computed(() => `https://www.npmjs.com/package/${props.name}`);
 
 <template>
   <div class="flex flex-col shadow-md bg-default">
-    <a v-if="preview" :href="homepage">
+    <a v-if="preview" :href="homepage" target="_blank">
       <img class="rounded-t-lg object-cover h-48 w-full object-center" :src="preview" :alt="name" rel="preload" />
     </a>
     <div class="flex-1 flex justify-between flex-col p-8 w-full">
       <div>
         <div class="flex items-center truncate">
-          <a :href="homepage" class="flex gap-2 items-center text-lg tracking-wide flex opacity-60 !no-underline !color-inherit !font-inherit">
+          <a :href="homepage" target="_blank" class="flex gap-2 items-center text-lg tracking-wide flex opacity-60 !no-underline !color-inherit !font-inherit">
             <div class="i-cil-link-alt size-1em" />
             <span>{{ props.name }}</span>
           </a>

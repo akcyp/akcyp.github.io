@@ -1,6 +1,7 @@
 {
   "packages": [
     { "name": "react-lasso-select" },
+    { "name": "react-files-input" },
     { "name": "strapi-plugin-point-list" },
     { "name": "snake-cli-ts" },
     { "name": "coverage-pretty-html-reporter" }
@@ -11,8 +12,8 @@
       "preview": "https://github.com/akcyp/react-lasso-select/raw/main/preview.jpg"
     },
     {
-      "path": "akcyp/react-files-upload",
-      "preview": "https://github.com/akcyp/react-files-upload/raw/main/preview-1.jpg"
+      "path": "akcyp/react-files-input",
+      "preview": "https://github.com/akcyp/react-files-input/raw/main/preview-1.jpg"
     },
     {
       "path": "akcyp/svg-path-marker",
